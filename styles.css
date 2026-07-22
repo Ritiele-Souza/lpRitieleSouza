@@ -364,7 +364,17 @@ details[open] .faq__icon::after{transform:translateY(-50%) rotate(0);}
    força os itens lado a lado em vez de quebrar linha no meio. */
 @media (min-width:701px) and (max-width:1024px){
   .who__row{grid-template-columns:repeat(3,1fr);gap:20px;}
-  .frentes__grid{grid-template-columns:repeat(4,1fr);gap:14px;}
+  .frentes__grid{grid-template-columns:repeat(4,1fr);gap:12px;}
+  /* Cards mais estreitos (4 por linha): mais altura + texto do verso menor,
+     senão a lista de capítulos das frentes com mais itens transborda. */
+  .flip{aspect-ratio:3/4.5;}
+  .flip__face{padding:18px;}
+  .flip__front h3{font-size:1.2rem;}
+  .flip__front .ico{width:26px;height:26px;}
+  .flip__back{gap:8px;}
+  .flip__back .kicker{font-size:0.62rem;}
+  .flip__back ol{gap:7px;}
+  .flip__back li{font-size:0.74rem;gap:7px;line-height:1.25;}
 }
 
 /* ---------- Reveal ---------- */
